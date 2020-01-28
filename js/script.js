@@ -118,7 +118,6 @@ let script = {
 		},
 
 		"scene rgb(0,0,0) with fadeIn",
-		"jump Kitchen",
 		"centered <font color='white'>Mai Khao Beach Resort, Phuket, Thailand <br> 25 Dec 2018, 11:30pm</font>",
 		"jump Market"
 
