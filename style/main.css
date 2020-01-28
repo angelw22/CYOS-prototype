@@ -1,0 +1,722 @@
+/**
+ * =============================================================================
+ * This is the file where all your styling should go in.
+ * Instead of modifying the styles found in the monogatari.css file or others,
+ * you should overwrite those styles in this file.
+ *
+ * The CSS selectors shown are not an extensive list but they are the most
+ * common you might want to change. To find what other elements are available,
+ * you can take a look at the monogatari.css file or use your browser's dev
+ * tools to inspect the elements.
+ * =============================================================================
+**/
+
+/**
+ * ===========================
+ * General Styling
+ * ===========================
+**/
+
+/* General Style */
+body {
+	font-family: 'Fira Sans', sans-serif;
+	/* font-family: 'Fira Sans Condensed', sans-serif; */
+}
+
+/* Simple Button styles*/
+button {
+	border-radius: 25px;
+	padding: 0;
+}
+
+/* Simple Button Style on Hover */
+button:hover {
+
+}
+
+/* General Styling for Menu Screens */
+[data-menu] {
+
+}
+
+/**
+ * ===========================
+ * Main Menu Styling
+ * ===========================
+**/
+
+/* Main Menu Styling */
+[data-menu="main"] {
+
+}
+
+/* Main Menu Buttons Styling */
+[data-menu="main"] button {
+
+}
+
+/**
+ * ===========================
+ * Save and Load Menus Styling
+ * ===========================
+**/
+
+/* Slots Style */
+[data-ui="slots"] figure {
+
+}
+
+/* Slot's Image Style */
+[data-ui="slots"] img {
+
+}
+
+/* Slots Title Style */
+[data-ui="slots"] figcaption {
+
+}
+
+/* Slots Delete Button Style */
+[data-ui="slots"] button {
+
+}
+
+/**
+ * ===========================
+ * Game Elements Styling
+ * ===========================
+**/
+
+/* Choice Buttons style */
+[data-ui="choices"] button {
+
+}
+/* [data-ui="choices"] > .inventoryBag{
+	position: relative;
+	margin-left: auto;
+	margin-bottom: auto;
+	top: 10px;
+	right: 10px;
+	width: 90px;
+	height: 90px;
+} */
+
+/* Choice Button Style on Hover */
+[data-ui="choices"] button:hover {
+
+}
+
+/* Text Box styling */
+[data-ui="text"] {
+	padding: 1rem;
+	border-radius: 40px 40px 0 0;
+}
+
+/* Character Name Style */
+[data-ui="who"] {
+
+}
+
+/* Style for Centered Text */
+[data-ui="centered"] {
+
+}
+
+/* Character Images Styles */
+#game [data-character] {
+	filter: brightness(50%);
+}
+
+#game [data-character].focus {
+	filter: none;
+}
+
+/* Other Images Styles */
+#game [data-image] {
+
+
+}
+
+
+/* bag stuff */
+
+[data-component="button-container"].active {
+	display: block;	
+	animation: fadeIn 2s ease;
+}
+
+[data-component="button-container"] > button{
+	background-color: #000000a1;
+	border-radius: 7px;
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	z-index: 11;
+	font-size: 1rem;
+	padding: 15px;
+}
+
+[data-component="button-container"] > button > img {
+	position: relative !important;
+}
+
+[data-component="modal"][data-ui="bag"] {
+	max-width:100%;
+	max-height:100%;
+	height: 100%;
+	width: 100%;
+	background: none;
+	padding: 0;
+
+}
+
+.bag-modal-wrapper {
+	margin: auto;
+	margin-right: 0;
+	background-color: #000000ed;
+	width: 30%;
+	min-width: 200px;
+	max-width: 300px;
+	height: 100%;
+}
+
+[data-ui="bag"].active {
+	animation: fadeIn 1s ease;
+	/* animation: slideInRight 2s ease; */
+}
+
+[data-ui="bag"] {
+	height: 100 vh; 
+	max-width: 400px;
+}
+
+[data-ui="bag"].closed {
+	animation: fadeOut 1s ease;
+}
+
+[data-action="open-bag"].flashing {
+	animation: flashing-animation 1.5s ease-in-out infinite;
+}
+
+
+[data-ui="map"].active, [data-ui="article"].active {
+	display: block;
+	z-index: 16;
+	background-color:#000000e0;
+	opacity: 1;
+	animation: fadeIn 1s ease;
+}
+
+[data-ui="map"].closed, [data-ui="article"].closed {
+	font-size: 0;
+	display: block;
+	z-index: 16;
+	background: none;
+	opacity: 0;
+	animation: mapFadeOut 2s ease forwards;
+}
+
+[data-ui="map"], [data-ui="article"] {
+	height: 100vh;
+	opacity: 0;
+}
+
+[data-ui="map"] img, [data-ui="article"] img {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%)
+}
+/* .map {
+	max-width: 500px;
+	height: auto;
+} */
+
+.close-button {
+	color: white; 
+	padding-top: 20px;
+	cursor: pointer;
+}
+
+
+.bag-item {
+	height: 150px;
+	background-color: #e8e8e8;
+	box-shadow: 2px 2px 5px #27272761;
+	border-radius: 5px;
+	margin: 20px;
+	cursor: pointer;
+	padding: 10px;
+	transition: all 0.5s;
+}
+
+.bag-item:hover {
+	background-color: #adadad;
+	box-shadow: none;
+}
+
+.bag-item > img {
+	max-width: 80%;
+}
+
+/**
+ * ===========================
+ * Quick Menu Styling
+ * ===========================
+**/
+
+/* These styles are applied to the Mobile version of the Quick Menu */
+
+/* Quick Menu Style */
+[data-ui="quick-menu"] {
+
+}
+
+/* Quick Menu Buttons Style */
+[data-ui="quick-menu"] span {
+
+}
+
+/* Quick Menu Buttons Style on Hover */
+[data-ui="quick-menu"] span:hover {
+
+}
+
+/* Quick Menu Buttons Icon Style */
+[data-ui="quick-menu"] > span > .fa {
+
+}
+
+/* Styles for the desktop version of the Quick Menu*/
+@media screen and (min-width: 37.56255em) {
+
+	/* Quick Menu Style */
+	[data-ui="quick-menu"] {
+
+	}
+
+	/* Quick Menu Buttons Style */
+	[data-ui="quick-menu"] span {
+
+	}
+
+	/* Quick Menu Buttons Style on Hover */
+	[data-ui="quick-menu"] span:hover {
+
+	}
+}
+
+
+/* Room */
+
+#fan { 
+	position: relative;
+	transform: translateY(-49%) rotateX(100deg);
+	display: inline-block;
+	z-index: 0;
+	width: 100vw;
+	height: auto;
+}
+
+#fan  img {
+ position: relative;
+ top: -40vh;
+ transform-origin: 50.5% 64%;
+ animation: fanRotate 7s linear infinite;
+}
+
+.lyingDown {
+	transform: translateZ(400px) rotateX(20deg) !important
+}
+
+#room-overlay {
+	height: 100vh;
+	width: 120vw;
+}
+
+.scroller .bedroom {
+	transform: translateZ(10vw) rotateX(20deg)
+}
+
+/* 3D */
+
+/* Main box configurations */
+.container {
+	position: relative;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+	perspective: 3000px;
+	background:#3a3a3a;
+}
+
+.scroller {
+	height: 100%;
+	transform-style: preserve-3d;
+	transform: translateZ(0vw) rotateX(0deg);
+}
+
+.room {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100vw;
+	height: 100vh;
+	margin: -50vh 0 0 -50vw;
+	pointer-events: none;
+	opacity: 0;
+	transform-style: preserve-3d;
+}
+
+.current {
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.current div {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+}
+.current div:before{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.current div {
+	width: 100%;
+	height: 100%;
+}
+/* universal box code */
+
+.bedroom #w-left, .bedroom #w-right, .bedroom #w-back, .bedroom #w-top{
+	filter: brightness(0.5);
+	background-image: url(" https://pre00.deviantart.net/1b9f/th/pre/i/2011/339/d/9/seamless_stone_wall_texture_by_hhh316-d4i9d4s.jpg");
+}
+
+.kitchen #w-right, .kitchen #w-left, .kitchen #w-back, .kitchen #w-top {
+	filter: none;
+	background-color: pink;
+	background-image: none;
+}
+
+
+
+/* .kitchen {
+	display: none;
+} */
+
+#w-door {
+	background-color: black;
+	bottom: 0;
+	width: 30vw;
+	max-width: 300px;
+	height: 500px;
+	filter: blur(3px);
+  box-shadow: 0px 0px 60px rgba(0,0,0, 0.7);
+	transform: translate3d(0, 0, 0) rotate3d(1,0,0,0deg);
+}
+
+#k-door {
+	left: 60%;
+	background-color: black;
+	bottom: 0;
+	width: 30vw;
+	max-width: 300px;
+	height: 500px;
+	filter: blur(3px);
+  box-shadow: 0px 0px 10px rgba(0,0,0, 0.7);
+	transform: translate3d(0, 0, 0) rotate3d(1,0,0,0deg);
+}
+
+#w-back{
+	width: 101vw;
+	height: 100vh;
+	transform: translate3d(0, 0, -2000px) rotate3d(1,0,0,0.1deg) rotate3d(1,0,0,0deg);
+
+}
+#w-back:before{
+	background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+#w-left,#w-right{
+	width: 2000px; 
+	height: 100vh;
+}
+#w-left{
+	justify-content: flex-start;
+	transform: rotate3d(0, 1, 0, 90deg);
+	transform-origin: 0 50%;
+}
+#w-left:before{
+	background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.45));
+}
+#w-right{
+	right: 0;
+	justify-content: flex-end;
+	transform: rotate3d(0, 1, 0, -90.03deg);
+	transform-origin: 100% 50%;
+}
+#w-right:before{
+	background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.45));
+}
+
+#w-bottom {
+	width: 100vw; 
+	height: 2000px;
+	transform: rotate3d(1, 0, 0, 90deg) translate3d(0, -2000px, 0);
+	transform-origin: 50% 0%;
+	top: 100%;
+	background-image: url("https://i.pinimg.com/originals/51/a9/4e/51a94ed7c41cce2309d7bc7a2bd9dc0c.jpg");
+}
+#w-bottom:before{
+	background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.5));
+}
+
+#w-top {
+	transform: rotate3d(-1, 0, 0, 90deg);
+	transform-origin: top;
+	top: 0;
+	height: 2000px;
+}
+
+
+#w-counter-bottom {
+	width: 2000px;
+	height: 30vh; 
+	bottom: 0;
+}
+
+#w-counter-top {
+	width: 2000px;
+	height: 30vh; 
+	top: 0;
+}
+
+#pots {
+	width: 240px;
+	left: 0;
+	height: auto;
+}
+
+/* anchoring counters */
+
+.counter-bottom {
+	transform: rotate3d(1, 0, 0, -90deg);
+	transform-origin: bottom;
+	background-image: url(http://bhagirathstone.com/category/marble.png);
+	background-image: linear-gradient(to top, #00000095, #00000054), url(http://bhagirathstone.com/category/marble.png)
+}
+
+.counter-top {
+	transform: rotate3d(1, 0, 0, 90deg);
+	transform-origin: top;
+	background-image: url("http://bhagirathstone.com/category/marble.png");
+	background-image: linear-gradient(to bottom, #00000085, #ffff0000), url(http://bhagirathstone.com/category/marble.png);
+}
+
+/* other sides */
+
+.counter-front-bottom {
+	width: 16%;
+	left: 0;
+	background-image: url("http://bhagirathstone.com/category/marble.png");
+	background-image: linear-gradient(to bottom left, black, #0000000f), url(http://bhagirathstone.com/category/marble.png);
+	transform: rotate3d(0, 1, 0, 90deg);
+	transform-origin: left;
+}
+
+.counter-front-top {
+	width: 16%;
+	left: 0;
+	background-image: url("http://bhagirathstone.com/category/marble.png");
+	background-image: linear-gradient(to top, #00000085, #ffff0000), url(http://bhagirathstone.com/category/marble.png);
+	transform: rotate3d(0, 1, 0, 90deg);
+	transform-origin: left;
+}
+
+.counter-right-top {
+	transform: rotate3d(1, 0, 0, -90deg);
+	transform-origin: top;	
+	background-image: url("http://bhagirathstone.com/category/marble.png");
+}
+
+.counter-right-bottom {
+	transform: rotate3d(1, 0, 0, 90deg);
+	transform-origin: bottom;	
+	background-image: url("http://bhagirathstone.com/category/marble.png");
+	background-image: linear-gradient(to bottom, #00000085, #ffff0000), url(http://bhagirathstone.com/category/marble.png);
+}
+
+#game [data-image="phone"] {
+	margin-bottom: -10%;
+	margin-top: auto;
+	top: 0; 
+	left: 0;
+}
+
+
+#fridge {
+	width: 200px;
+	height: 65vh;
+	bottom: 0;
+	right: 20%
+}
+
+
+#fridge-body {
+	transform: translate3d(10px, 10px, 300px);
+	background: none;
+}
+
+
+
+#fridge-body-left, #top-left, #top-c-left {
+	transform: rotate3d(0, 1, 0, 90deg);
+	background-color: #314e1d;
+	transform-origin: left;
+	left: 0;
+}
+
+#fridge-body-left, #fridge-body-right {
+	width:300px;
+	background: linear-gradient(to right, #314e1d , #233a14)
+}
+
+
+#fridge-body-right, #top-right, #top-c-right {
+	transform: rotate3d(0, 1, 0, -90deg);
+	background-color: #314e1d;
+	transform-origin: right;
+	right: 0;
+}
+
+#fridge-body-top, #top-top, #top-c-top {
+	background-color: #314e1d;
+	transform: rotate3d(1, 0, 0, -90deg);
+	transform-origin: top;
+	top: 0;
+}
+
+#fridge-inside {
+	width:100%;
+	height:30%;
+	top:0;
+	box-sizing: border-box;
+  border: 10px solid white;
+}
+
+#fridge-body:before, #fridge-inside:before {
+	content:none;
+	width: 0;
+	height: 0;
+}
+
+
+#top-top, #top-bottom {
+	height: 30px;
+	width: 100%;
+}
+
+#top-compartment {
+	transform-origin: left;
+	top: 0; 
+	height: 29%;
+	width: 100%;
+	background-color: grey;
+	box-shadow: 10px 10px 10px;
+}
+
+#bottom-compartment {
+	height: 70%;
+	width: 100%;
+	bottom: 0;
+}
+
+#top-left, #top-right {
+	width: 30px;
+	height: 100%;
+}
+
+#top-bottom, #top-c-bottom {
+	background-color: #314e1d;
+	bottom: 0;
+	transform-origin: bottom;
+	transform: rotate3d(1, 0, 0, 90deg);
+}
+
+#top-front {
+	top: 0;
+	background-color: #548235;
+	transform: translate3d(0, 0, 30px);
+}
+
+#bottom-front {
+	bottom: 0;
+	background-color: #548235;
+	transform: translate3d(0, 0, 30px);
+}
+
+#top-c-back {
+	transform: translate3d(0,0, -150px);
+	background-color: #233a14;
+	display: flex;
+}
+
+.drinks {
+	padding: 10px;
+	width: 100px;
+	bottom: 0;
+	animation: flashing-animation 1.2s infinite;
+}
+
+.drinks:hover {
+	transform: scale(1.3);
+	cursor: pointer;
+}
+
+#can1 {
+	margin-left: -60px;
+}
+
+#can3 {
+	margin-left: 60px;
+}
+
+#top-c-top, #top-c-bottom {
+	height: 150px;
+}
+
+#top-c-left, #top-c-right {
+	width: 150px;
+}
+
+
+#article {
+	cursor: pointer;
+	filter: drop-shadow(3px 3px 3px #0000004a);
+}
+
+#tape {
+	background-color: #ffffffa6;
+	width: 30px;
+	height: 8px;
+	top: 3%;
+}
+
+
+.shaking {
+	animation: shake 1s infinite;
+}
+
+.earthquakeWalk {
+	animation: walkOut 11s forwards;
+}
+
